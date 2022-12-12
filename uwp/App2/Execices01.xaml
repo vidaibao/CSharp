@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="App2.Execices01"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignWidth="750" d:DesignHeight="500">
+    <Grid x:Name="Execices01Page" Width="750" Height="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="changeText" Content="Change the label if checked" VerticalAlignment="Center" Height="55" Width="238" FontFamily="Segoe UI" HorizontalAlignment="Center" FontSize="18"/>
+        <CheckBox x:Name="enableCheckbox" Content="Enable label changing" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" IsChecked="True"/>
+        <TextBlock x:Name="labelToChange" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2" Text="Press the button to change my text" TextWrapping="Wrap" VerticalAlignment="Center" Height="132" Width="597" FontSize="36" FontFamily="Segoe UI"/>
+    </Grid>
+</Page>
