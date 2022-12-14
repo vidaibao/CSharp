@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaizaSkillCheck", "PaizaSkillCheck.csproj", "{C7C0811B-DC7B-4DFB-9100-8571F5E23789}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7C0811B-DC7B-4DFB-9100-8571F5E23789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C0811B-DC7B-4DFB-9100-8571F5E23789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C0811B-DC7B-4DFB-9100-8571F5E23789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C0811B-DC7B-4DFB-9100-8571F5E23789}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C585170-E0BF-4F20-8D69-7D203E0DF454}
+	EndGlobalSection
+EndGlobal
