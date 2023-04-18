@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Data;
 
 namespace WpfApp1
@@ -11,9 +12,12 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         //Decimal result = 0;
-        //Decimal tempNum = 0, num2 = 0;
+        double tempNum = 0, num1 = 0;
         const string DIGIT_FORMAT = "#,##0.##############";
         const int DIGIT_NUM_LIMIT = 12;
+        private string operatorFlag = "";
+
+        public string OperatorFlag { get => operatorFlag; set => operatorFlag = value; }
 
         public MainWindow()
         {
@@ -22,58 +26,149 @@ namespace WpfApp1
             txtResult.Text = "0";
         }
 
-        private void Btn7_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateResult(7);
-        }
 
-        private void UpdateResult(int v)
+
+
+        private void UpdateTempNum(string s)
         {
-            if (CountDigitNum(txtResult.Text) == -1)
+            string digit09 = "0123456789";
+            // CHECK size txt then 
+            if (digit09.Contains(s) && txtResult.Text.Length >= DIGIT_NUM_LIMIT)
             {
                 return;
             }
-            if (v == 0)
+            if (s.Equals("0"))
             {
-                if (double.Parse(txtResult.Text) != 0)
+                if (txtResult.Text.Equals("0")) { return; }
+                else
                 {
-                    txtResult.Text += v.ToString();
+                    if (txtResult.Text.Contains("."))
+                    {
+                        //update result
+                        updateResultText(s);
+                    }                        
+                    else
+                    {
+                        tempNum *= 10;//
+                        updateResultText(s);
+                    }
                 }
             }
-            else if (txtResult.Text.Equals("0"))
+            else if (digit09.Contains(s))
             {
-                txtResult.Text = "";
-                txtResult.Text += v.ToString();
+                // if OperatorFlag OFF update result & tempNum
+                if (OperatorFlag.Length > 0) // ON then reset to num2
+                {
+                    setResultText(s);
+                    tempNum = double.Parse(txtResult.Text);
+                }
+                else
+                {
+                    txtResult.Text = double.Parse(txtResult.Text + s).ToString(DIGIT_FORMAT);
+                    tempNum = double.Parse(tempNum.ToString() + s);
+                }
             }
-            else if (txtResult.Text[txtResult.Text.Length - 1].Equals('.') && txtResult.Text.Length < DIGIT_NUM_LIMIT)
+            else if (s.Equals("."))
             {
-                txtResult.Text += v.ToString();
+                if (txtResult.Text.Contains(".")) {
+                    if (OperatorFlag.Length > 0) // ON ready for num2
+                    {
+                        updateResultText("0."); //update result, tempNum still = 0
+                    }
+                    else return;
+                } // && !ON
+                else if (OperatorFlag.Length > 0 && tempNum == 0)
+                {
+                    setResultText("0.");
+                }
+                else
+                {
+                    updateResultText(s);  //update result
+                }
+            }
+            else if (s.Equals("+") || s.Equals("-") || s.Equals("*") || s.Equals("/"))
+            {
+                // update view      tempNum ==> num1 operatorFlag ON ; tempNum = 0
+                if (OperatorFlag.Equals(""))
+                {
+                    num1 = tempNum;
+                    tempNum = 0;
+                    txtNum1.Text = num1.ToString() + " " + s;
+
+                    OperatorFlag = s;
+                }
+                else if (OperatorFlag.Equals(s)) return;
+                else //if (!OperatorFlag.Equals(s) && tempNum == 0)
+                {
+                    OperatorFlag = s;
+                    var temp = txtNum1.Text.Split(' ');
+                    txtNum1.Text = temp[0] + " " + s;
+                }
+
+                
+                
+            }
+            else if (s.Equals("C"))
+            {
+                // reset all tempNum, View, Result...
+                setResultText("0");
+                OperatorFlag = "";
+                tempNum = 0;
+                num1 = 0;
+                txtNum1.Text = "0";
+            }
+            else if (s.Equals("+/-"))
+            {
+                // update tempNum, View, Result
+                tempNum *= -1;
+            }
+            else if (s.Equals("Back"))
+            {
+
+            }
+            else if (s.Equals("="))
+            {
+                equalSolving();
             }
             else
             {
-                txtResult.Text = FormatTxtResult(v.ToString());
+
             }
         }
 
-        private void Btn1_Click(object sender, RoutedEventArgs e)
+
+
+        private void equalSolving()
         {
-            UpdateResult(1);
+            double temp = num1 + tempNum;
+            setResultText(temp.ToString(DIGIT_FORMAT));
         }
 
-        private string FormatTxtResult(string addS)
-        {
-            //MessageBox.Show(decimal.Parse(s, CultureInfo.InvariantCulture).ToString("N0"));
-            //CountDecimalNum(s);
-            if (CountDigitNum(Decimal.Parse(txtResult.Text + addS).ToString(DIGIT_FORMAT)) == -1)
-                return txtResult.Text;
-            //string x = new string ('#', 5);
-            //MessageBox.Show(x);
 
-            //MessageBox.Show(Decimal.Parse(s).ToString(DIGIT_FORMAT));
-            //String.Format("{0:n}", 1234);  // Output: 1,234.00
-            //return String.Format("{0:n0}", s); //9876 No digits after the decimal point. Output: 9,876
-            return Decimal.Parse(txtResult.Text + addS).ToString(DIGIT_FORMAT);// dec.ToString("N0");
+       private void updateResultText(string s)
+        {
+            txtResult.Text += s;
         }
+
+        private void setResultText(string s)
+        {
+            txtResult.Text = s;
+        }
+
+        //private string FormatTxtResult(string addS)
+        //{
+        //    //MessageBox.Show(decimal.Parse(s, CultureInfo.InvariantCulture).ToString("N0"));
+        //    //CountDecimalNum(s);
+        //    if (CountDigitNum(Decimal.Parse(txtResult.Text + addS).ToString(DIGIT_FORMAT)) == -1)
+        //        return txtResult.Text;
+        //    //string x = new string ('#', 5);
+        //    //MessageBox.Show(x);
+
+        //    //MessageBox.Show(Decimal.Parse(s).ToString(DIGIT_FORMAT));
+        //    //String.Format("{0:n}", 1234);  // Output: 1,234.00
+        //    //return String.Format("{0:n0}", s); //9876 No digits after the decimal point. Output: 9,876
+        //    return Decimal.Parse(txtResult.Text + addS).ToString(DIGIT_FORMAT);// dec.ToString("N0");
+        //}
 
         private int CountDigitNum(string s) // include . ,
         {
@@ -85,100 +180,105 @@ namespace WpfApp1
             return s.Length;
         }
 
-        private void BtnC_Click(object sender, RoutedEventArgs e)
-        {
-            txtResult.Text = "0";
-        }
-
-        private void BtnDot_Click(object sender, RoutedEventArgs e)
-        {
-            if (txtResult.Text.Length < DIGIT_NUM_LIMIT && !txtResult.Text.Contains("."))
-            {
-                txtResult.Text += ".";
-            }
-        }
-
-        private void Btn0_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateResult(0);
-        }
-
-        private int CountDecimalNum(string s)
-        {
-            if (s.Contains('.'))
-            {
-                string[] temp = s.Split('.');
-                if (temp[1].Length <= 0)
-                {
-                    return 0;
-                }
-                return temp[1].Length;
-            }
-            return 0;
-        }
-
-        private void Btn2_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateResult(2);
-        }
-
-        private void Btn3_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateResult(3);
-        }
-
-        private void Btn4_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateResult(4);
-        }
-
-        private void Btn5_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateResult(5);
-        }
-
-        private void Btn6_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateResult(6);
-        }
-
-        private void Btn8_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateResult(8);
-        }
-
-        private void Btn9_Click(object sender, RoutedEventArgs e)
-        {
-            UpdateResult(9);
-        }
+        //private void BtnC_Click(object sender, RoutedEventArgs e)
+        //{
+        //    txtResult.Text = "0";
+        //    OperatorFlag = "";
+        //    tempNum = 0;
+        //    txtNum1.Text = "0";
+        //}
 
         
-        private void TxtResult_TargetUpdated(object sender, DataTransferEventArgs e)
+
+        private void Btn_Click(object sender, RoutedEventArgs e)
         {
-            txtView.Text = txtResult.Text;
+            Button btn = (Button)sender;
+            //UpdateResult(int.Parse(btn.Content.ToString()));
+            //UpdateView_Num1();
+            UpdateTempNum(btn.Content.ToString());
         }
 
-        private void BtnSign_Click(object sender, RoutedEventArgs e)
+        private void UpdateView_Num1()
         {
-            if (double.Parse(txtResult.Text) < 0)
+            tempNum = double.Parse(txtResult.Text);
+            txtNum1.Text = tempNum.ToString();
+        }
+
+        private void UpdateView_Num1(string op)
+        {
+            if (op.Equals("-1"))    //sign button
             {
-                txtResult.Text = txtResult.Text.Substring(1);
-            }
-            else
-            {
-                txtResult.Text = "-" + txtResult.Text;
+                txtNum1.Text = (tempNum * -1).ToString();
+                return;
             }
             
+            //number button
+            txtNum1.Text = tempNum.ToString() + " " + op;
         }
 
-        private void BtnPlus_Click(object sender, RoutedEventArgs e)
-        {
+        //private void BtnSign_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (double.Parse(txtResult.Text) < 0)
+        //    {
+        //        txtResult.Text = txtResult.Text.Substring(1);
+        //    }
+        //    else
+        //    {
+        //        txtResult.Text = "-" + txtResult.Text;
+        //    }
+            
+        //}
 
-        }
 
+        //public static double solvingNum(double num1, double num2, string operatorStr)
+        //{
+        //    switch (operatorStr)
+        //    {
+        //        case "+":
+        //            return num1 + num2;
+        //        case "-":
+        //            return num1 - num2;
+        //        case "*":
+        //            return num1 * num2;
+        //        case "/":
+        //            if (num2 != 0)
+        //                return num1 / num2;
+        //            else
+        //                MessageBox.Show("Can not divide by 0!");
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //    return 0;
+        //}
+
+        
         private void OnTargetUpdated(object sender, DataTransferEventArgs e)
         {
 
         }
+
+        private void TxtResult_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (true)
+            {
+
+            }
+            MessageBox.Show(OperatorFlag);
+        }
+
+        //private void BtnBack_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (txtResult.Text.Length == 1)
+        //    {
+        //        txtResult.Text = "0";
+        //        return;
+        //    }
+                
+        //    if (txtResult.Text.Contains('.'))
+        //        txtResult.Text = txtResult.Text.Substring(0, txtResult.Text.Length - 1); 
+        //    else
+        //        txtResult.Text = double.Parse(txtResult.Text.Substring(0, txtResult.Text.Length - 1)).ToString(DIGIT_FORMAT);
+        //}
     }
 }
