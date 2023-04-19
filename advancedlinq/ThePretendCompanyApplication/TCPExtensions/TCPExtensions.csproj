@@ -44,5 +44,11 @@
     <Compile Include="Extension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TCPData\TCPData.csproj">
+      <Project>{7DF4C491-B766-49BD-9164-7E64BAA7DB2F}</Project>
+      <Name>TCPData</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

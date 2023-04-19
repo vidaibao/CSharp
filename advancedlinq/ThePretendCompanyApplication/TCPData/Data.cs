@@ -121,6 +121,35 @@ namespace TCPData
                 DepartmentId = 1
             });
 
+            employees.Add(new Employee
+            {
+                Id = 11,
+                FirstName = "PhD03",
+                LastName = "November",
+                AnnualSalary = 100000.3m,
+                IsManager = true,
+                DepartmentId = 4
+            });
+
+            employees.Add(new Employee
+            {
+                Id = 12,
+                FirstName = "Saleman02",
+                LastName = "December",
+                AnnualSalary = 110000.1m,
+                IsManager = true,
+                DepartmentId = 5
+            });
+
+            employees.Add(new Employee
+            {
+                Id = 13,
+                FirstName = "Accounting01",
+                LastName = "Thirdteen",
+                AnnualSalary = 100000.11m,
+                IsManager = true,
+                DepartmentId = 6
+            });
             return employees;
         }
 
@@ -150,6 +179,27 @@ namespace TCPData
                 Id = 3,
                 ShortName = "TE",
                 LongName = "Technology"
+            });
+
+            result.Add(new Department
+            {
+                Id = 4,
+                ShortName = "RD",
+                LongName = "Research & Developement"
+            });
+
+            result.Add(new Department
+            {
+                Id = 5,
+                ShortName = "MKT",
+                LongName = "Marketing"
+            });
+
+            result.Add(new Department
+            {
+                Id = 6,
+                ShortName = "ACC",
+                LongName = "Accounting"
             });
 
             return result;
