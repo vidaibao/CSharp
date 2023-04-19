@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -146,7 +147,7 @@ namespace TCPData
                 Id = 13,
                 FirstName = "Accounting01",
                 LastName = "Thirdteen",
-                AnnualSalary = 100000.11m,
+                AnnualSalary = 100000.1m,
                 IsManager = true,
                 DepartmentId = 6
             });
@@ -157,7 +158,7 @@ namespace TCPData
 
         public static List<Department> GetDepartments()
         {
-            List<Department> result = new List<Department>();
+            List<Department> departments = new List<Department>();
 
             Department department = new Department 
             {
@@ -165,44 +166,83 @@ namespace TCPData
                 ShortName = "HR",
                 LongName = "Humman Resources"
             };
-            result.Add(department);
+            departments.Add(department);
 
-            result.Add(new Department
+            departments.Add(new Department
             {
                 Id = 2,
                 ShortName = "FN",
                 LongName = "Finance"
             });
 
-            result.Add(new Department
+            departments.Add(new Department
             {
                 Id = 3,
                 ShortName = "TE",
                 LongName = "Technology"
             });
 
-            result.Add(new Department
+            departments.Add(new Department
             {
                 Id = 4,
                 ShortName = "RD",
                 LongName = "Research & Developement"
             });
 
-            result.Add(new Department
+            departments.Add(new Department
             {
                 Id = 5,
                 ShortName = "MKT",
                 LongName = "Marketing"
             });
 
-            result.Add(new Department
+            departments.Add(new Department
             {
                 Id = 6,
                 ShortName = "ACC",
                 LongName = "Accounting"
             });
 
-            return result;
+            return departments;
+        }
+
+
+        public static ArrayList GetHeterogeneousDataCollection()
+        {
+            ArrayList arrList = new ArrayList();
+
+            arrList.Add(100);
+            arrList.Add("Bob John");
+            arrList.Add(2000);
+            arrList.Add(3000.3);
+            arrList.Add("Bill Clinton");
+            arrList.Add(new Employee {
+                Id=15, FirstName="Anna", LastName="Hattaway", AnnualSalary=65000, IsManager=true, DepartmentId=3
+            });
+            arrList.Add(new Employee
+            {
+                Id = 16,
+                FirstName = "Indiana",
+                LastName = "John",
+                AnnualSalary = 85000,
+                IsManager = true,
+                DepartmentId = 4
+            });
+            arrList.Add(new Department
+            {
+                Id=7,
+                ShortName="TP",
+                LongName="Transportation"
+            });
+            arrList.Add(new Department
+            {
+                Id = 8,
+                ShortName = "PRD",
+                LongName = "Production"
+            });
+
+            return arrList;
+
         }
 
     }
