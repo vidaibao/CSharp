@@ -403,3 +403,4 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of httpswww.toptal.comdevelopersgitignoreapivisualstudio
+/advancedlinq/ThePretendCompanyApplication/LINQOperators_1/Program.cs
