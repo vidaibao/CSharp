@@ -1,0 +1,41 @@
+﻿<Window x:Class="Tetris.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tetris"
+        mc:Ignorable="d"
+        Title="CCB Tetris" Height="600" Width="800" 
+        MinWidth="600" MinHeight="600"
+        Foreground="White" 
+        FontFamily="Calibri" FontSize="28"
+        KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/Background.png"/>
+        </Grid.Background>
+
+        <Viewbox Grid.Row="1"
+                 Grid.Column="1"
+                 Margin="0,0,0,20">
+            <Canvas x:Name="GameCanvas"
+                Grid.Row="1"
+                Grid.Column="1"
+                Background="Black"
+                Width="250"
+                Height="500"/>
+        </Viewbox>
+        
+    </Grid>
+</Window>
