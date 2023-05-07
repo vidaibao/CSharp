@@ -156,7 +156,8 @@ namespace TCPData
 
 
 
-        public static List<Department> GetDepartments()
+        //public static List<Department> GetDepartments()
+        public static List<Department> GetDepartments(IEnumerable<Employee> employees) // for Select
         {
             List<Department> departments = new List<Department>();
 
@@ -164,7 +165,10 @@ namespace TCPData
             {
                 Id = 1,
                 ShortName = "HR",
-                LongName = "Humman Resources"
+                LongName = "Humman Resources",
+                Employees = from emp in employees //for Select
+                            where emp.DepartmentId == 1
+                            select emp
             };
             departments.Add(department);
 
@@ -172,35 +176,50 @@ namespace TCPData
             {
                 Id = 2,
                 ShortName = "FN",
-                LongName = "Finance"
+                LongName = "Finance",
+                Employees = from emp in employees
+                            where emp.DepartmentId == 2
+                            select emp
             });
 
             departments.Add(new Department
             {
                 Id = 3,
                 ShortName = "TE",
-                LongName = "Technology"
+                LongName = "Technology",
+                Employees = from emp in employees
+                            where emp.DepartmentId == 3
+                            select emp
             });
 
             departments.Add(new Department
             {
                 Id = 4,
                 ShortName = "RD",
-                LongName = "Research & Developement"
+                LongName = "Research & Developement",
+                Employees = from emp in employees
+                            where emp.DepartmentId == 4
+                            select emp
             });
 
             departments.Add(new Department
             {
                 Id = 5,
                 ShortName = "MKT",
-                LongName = "Marketing"
+                LongName = "Marketing",
+                Employees = from emp in employees
+                            where emp.DepartmentId == 5
+                            select emp
             });
 
             departments.Add(new Department
             {
                 Id = 6,
                 ShortName = "ACC",
-                LongName = "Accounting"
+                LongName = "Accounting",
+                Employees = from emp in employees
+                            where emp.DepartmentId == 6
+                            select emp
             });
 
             return departments;

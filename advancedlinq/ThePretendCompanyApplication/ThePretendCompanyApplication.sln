@@ -14,7 +14,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPExtensions", "TCPExtensi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQExamples_1", "LINQExamples_1\LINQExamples_1.csproj", "{D6C1D32D-60B7-49E2-A9F0-836B4771A921}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQOperators_1", "LINQOperators_1\LINQOperators_1.csproj", "{67D5B85F-B8EE-4641-99CB-FB8F0F489389}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQOperators_2", "LINQOperators_1\LINQOperators_2.csproj", "{67D5B85F-B8EE-4641-99CB-FB8F0F489389}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQExample_3", "LINQExample_3\LINQExample_3.csproj", "{F26AF99C-F03F-462C-BA4A-02248DD3D27C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +44,10 @@ Global
 		{67D5B85F-B8EE-4641-99CB-FB8F0F489389}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67D5B85F-B8EE-4641-99CB-FB8F0F489389}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67D5B85F-B8EE-4641-99CB-FB8F0F489389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F26AF99C-F03F-462C-BA4A-02248DD3D27C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26AF99C-F03F-462C-BA4A-02248DD3D27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26AF99C-F03F-462C-BA4A-02248DD3D27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26AF99C-F03F-462C-BA4A-02248DD3D27C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
