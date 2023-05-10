@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreakingRecords", "Breaking
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MigratoryBirds", "MigratoryBirds\MigratoryBirds.csproj", "{3F840B7B-7940-4F29-B91A-3C96FC40FF29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayProgrammer", "DayProgrammer\DayProgrammer.csproj", "{4447C6AA-52D7-4393-B53E-A542F96DA015}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayProgrammer", "DayProgrammer\DayProgrammer.csproj", "{4447C6AA-52D7-4393-B53E-A542F96DA015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BomberMan", "BomberMan\BomberMan.csproj", "{704B89D3-9E28-4786-A637-8D892E2198CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +99,10 @@ Global
 		{4447C6AA-52D7-4393-B53E-A542F96DA015}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4447C6AA-52D7-4393-B53E-A542F96DA015}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4447C6AA-52D7-4393-B53E-A542F96DA015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{704B89D3-9E28-4786-A637-8D892E2198CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{704B89D3-9E28-4786-A637-8D892E2198CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{704B89D3-9E28-4786-A637-8D892E2198CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{704B89D3-9E28-4786-A637-8D892E2198CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

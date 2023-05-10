@@ -27,7 +27,7 @@ namespace Tetris
 
         public bool IsInside(int r, int c)
         {
-            return 0 <= r && r <= Rows && 0 <= c && c <= Columns;
+            return 0 <= r && r < Rows && 0 <= c && c < Columns;
         }
 
         public bool IsEmpty(int r, int c)
