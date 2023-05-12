@@ -51,6 +51,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissingNumbers", "MissingNu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciModifiedMock", "FibonacciModifiedMock\FibonacciModifiedMock.csproj", "{C7FC6D30-5107-495A-BACE-DA4DAAFF8D23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MisereNim", "MisereNim\MisereNim.csproj", "{2868F936-6ACA-493A-A5CD-B2CF4F73AFC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromeIndex", "PalindromeIndex\PalindromeIndex.csproj", "{263AD011-435E-4DC8-8D1C-F40BCDF5313D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -151,6 +155,14 @@ Global
 		{C7FC6D30-5107-495A-BACE-DA4DAAFF8D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7FC6D30-5107-495A-BACE-DA4DAAFF8D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7FC6D30-5107-495A-BACE-DA4DAAFF8D23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2868F936-6ACA-493A-A5CD-B2CF4F73AFC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2868F936-6ACA-493A-A5CD-B2CF4F73AFC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2868F936-6ACA-493A-A5CD-B2CF4F73AFC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2868F936-6ACA-493A-A5CD-B2CF4F73AFC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263AD011-435E-4DC8-8D1C-F40BCDF5313D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263AD011-435E-4DC8-8D1C-F40BCDF5313D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263AD011-435E-4DC8-8D1C-F40BCDF5313D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263AD011-435E-4DC8-8D1C-F40BCDF5313D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
