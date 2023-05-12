@@ -10,7 +10,7 @@ namespace SansaXOR
 
             //List<int> arr = new List<int> { 4, 5, 7, 5 };
             List<int> arr = new List<int> { 3, 4, 5 };
-            Console.WriteLine(sansaXor01(arr));
+            Console.WriteLine(sansaXor(arr));
             /*
              List<int> res = new List<int>();
              var combinations = GetCombinations(arr);
@@ -34,7 +34,55 @@ namespace SansaXOR
         }
 
 
-        static int sansaXor(List<int> arr)
+
+
+
+        public static int sansaXor(List<int> arr)
+        {
+            int length = arr.Count;
+            /*Phép XOR (Exclusive OR) giữa hai số chỉ trả về kết quả là 1 khi các bit 
+             * tương ứng của hai số khác nhau. Ví dụ:
+             *  1 XOR 1 = 0
+                1 XOR 0 = 1
+                0 XOR 1 = 1
+                0 XOR 0 = 0
+            Giả sử ta có n số nguyên dương là a1, a2, ..., an và đặt 
+            S   = a1 XOR a2 XOR ... XOR an
+                = (a1 XOR a2) XOR (a3 XOR a4) XOR ... XOR (an-1 XOR an)
+ 
+            Ta cần chứng minh S = 0 khi n là số chẵn.
+
+            Giả sử n = 2k với k là một số nguyên dương. Ta có:
+            S = a1 XOR a2 XOR ... XOR an
+              = (a1 XOR a2) XOR (a3 XOR a4) XOR ... XOR (an-1 XOR an)
+            Với mỗi cặp số (ai, ai+1), ta có ba trường hợp:
+
+            Nếu ai = ai+1, thì ai XOR ai+1 = 0.
+            Nếu ai và ai+1 khác nhau, thì ai XOR ai+1 = 1.
+            Nếu một trong hai số ai hoặc ai+1 bằng 0, thì ai XOR ai+1 = ai + ai+1.
+            Trong trường hợp thứ ba, ta có thể coi ai và ai+1 là không đóng góp gì cho tổng S,
+            vì S chỉ phụ thuộc vào các phần tử có giá trị khác 0. 
+            Do đó, ta chỉ cần quan tâm đến các trường hợp đầu tiên và thứ hai.
+
+            Nếu n là số chẵn, tức là k là số nguyên dương, ta có thể ghép các cặp số 
+            (ai, ai+1) lại với nhau, sao cho không có số nào bị bỏ qua. 
+            Vì vậy, trong mỗi cặp số, trường hợp thứ hai và thứ nhất đều xuất hiện một lần. 
+            Do đó, tổng S của n số này là S = 0 XOR 0 XOR ... XOR 0 = 0.
+
+            Vậy, ta đã chứng minh được rằng nếu n là số chẵn thì kết quả phép XOR của 
+            n số nguyên dương sẽ luôn bằng 0.*/
+            if (length % 2 == 0) return 0;
+
+            int result = 0;
+            for (int i = 0; i < length; i++)
+                if (i % 2 == 0)
+                    result ^= arr[i];
+
+            return result;
+        }
+
+
+        static int sansaXor03(List<int> arr)
         {
             var combinations = arr.Combinations(2);
 
@@ -65,7 +113,7 @@ namespace SansaXOR
             return true;
         }
 
-        static int sansaXor1(List<int> arr)
+        static int sansaXor02(List<int> arr)
         {
             //int[] arr = new int[] { 1, 2, 3, 5, 6, 7 };
             List<int> results = new List<int>();

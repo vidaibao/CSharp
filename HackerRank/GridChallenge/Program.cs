@@ -33,7 +33,25 @@ namespace GridChallenge
             //}
             //grid.ForEach(x => Console.WriteLine(x));
             //Console.WriteLine(isAlphabet(grid)?"YES":"NO");
+            Console.WriteLine(gridChallenge(grid));
+
         }
+
+
+
+        public static string gridChallenge(List<string> grid)
+        {
+
+            int length = grid.Count;
+            for (int i = 0; i < length; i++)
+            {
+                char[] temp = grid[i].OrderBy(x => x).ToArray();
+                grid[i] = new string(temp);
+            }
+
+            return isAlphabet(grid) ? "YES" : "NO";
+        }
+
 
         public static bool isAlphabet(List<string> grid) {
             
@@ -57,7 +75,7 @@ namespace GridChallenge
 
 
 
-        public static string gridChallenge(List<string> grid)
+        public static string gridChallenge00(List<string> grid)
         {
             //rearrange elements of each row alphabetically
             var g = grid.Select(x => x.OrderBy(c => c).ToList()).ToList();
