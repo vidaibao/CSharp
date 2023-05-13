@@ -45,15 +45,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClosestNumbers", "ClosestNu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MockAnagram", "MockAnagram\MockAnagram.csproj", "{9728B7A6-3F83-47F6-97AE-C522E0C21562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicArray", "DynamicArray\DynamicArray.csproj", "{1B9764E4-CC8B-4044-8089-E0C9F8C6A3C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicArray", "DynamicArray\DynamicArray.csproj", "{1B9764E4-CC8B-4044-8089-E0C9F8C6A3C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissingNumbers", "MissingNumbers\MissingNumbers.csproj", "{9337D52B-4CB0-4999-A0A2-40891651B38C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MissingNumbers", "MissingNumbers\MissingNumbers.csproj", "{9337D52B-4CB0-4999-A0A2-40891651B38C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciModifiedMock", "FibonacciModifiedMock\FibonacciModifiedMock.csproj", "{C7FC6D30-5107-495A-BACE-DA4DAAFF8D23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FibonacciModifiedMock", "FibonacciModifiedMock\FibonacciModifiedMock.csproj", "{C7FC6D30-5107-495A-BACE-DA4DAAFF8D23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MisereNim", "MisereNim\MisereNim.csproj", "{2868F936-6ACA-493A-A5CD-B2CF4F73AFC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MisereNim", "MisereNim\MisereNim.csproj", "{2868F936-6ACA-493A-A5CD-B2CF4F73AFC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromeIndex", "PalindromeIndex\PalindromeIndex.csproj", "{263AD011-435E-4DC8-8D1C-F40BCDF5313D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PalindromeIndex", "PalindromeIndex\PalindromeIndex.csproj", "{263AD011-435E-4DC8-8D1C-F40BCDF5313D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewYearChaos", "NewYearChaos\NewYearChaos.csproj", "{1F68A274-716E-4173-A211-BC25445FED98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodlandElectricity", "GoodlandElectricity\GoodlandElectricity.csproj", "{D01C8434-EDAB-4A92-A214-97176E34A274}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -163,6 +167,14 @@ Global
 		{263AD011-435E-4DC8-8D1C-F40BCDF5313D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{263AD011-435E-4DC8-8D1C-F40BCDF5313D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{263AD011-435E-4DC8-8D1C-F40BCDF5313D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F68A274-716E-4173-A211-BC25445FED98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F68A274-716E-4173-A211-BC25445FED98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F68A274-716E-4173-A211-BC25445FED98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F68A274-716E-4173-A211-BC25445FED98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D01C8434-EDAB-4A92-A214-97176E34A274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D01C8434-EDAB-4A92-A214-97176E34A274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D01C8434-EDAB-4A92-A214-97176E34A274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D01C8434-EDAB-4A92-A214-97176E34A274}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

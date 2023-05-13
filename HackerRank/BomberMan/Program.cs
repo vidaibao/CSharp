@@ -6,7 +6,19 @@ namespace BomberMan
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            List<string> grid = new List<string> 
+            {   ".......", 
+                "...O...", 
+                "....O..", 
+                ".......", 
+                "OO.....", 
+                "OO....."};
+            int n = 3;
+            
+            foreach (string s in bomberMan(n, grid)) 
+            {
+                Console.WriteLine(s);
+            }
         }
 
 
@@ -50,10 +62,10 @@ namespace BomberMan
                     if (bombMap[i][j] == bomb)
                     {
                         grid[i] = replaceCharAtIndex(grid[i], j, '.');
-                        if (i - 1 >= 0) grid[i - 1] = replaceCharAtIndex(grid[i - 1], j, '.');
-                        if (j - 1 >= 0) grid[i] = replaceCharAtIndex(grid[i], j - 1, '.');
-                        if (i + 1 < n) grid[i + 1] = replaceCharAtIndex(grid[i + 1], j, '.');
-                        if (j + 1 < m) grid[i] = replaceCharAtIndex(grid[i], j + 1, '.');
+                        if (i - 1 >= 0) grid[i - 1] = replaceCharAtIndex(grid[i - 1], j, empty);
+                        if (j - 1 >= 0) grid[i] = replaceCharAtIndex(grid[i], j - 1, empty);
+                        if (i + 1 < n) grid[i + 1] = replaceCharAtIndex(grid[i + 1], j, empty);
+                        if (j + 1 < m) grid[i] = replaceCharAtIndex(grid[i], j + 1, empty);
                     }
                 }
             }
