@@ -55,9 +55,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MisereNim", "MisereNim\Mise
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PalindromeIndex", "PalindromeIndex\PalindromeIndex.csproj", "{263AD011-435E-4DC8-8D1C-F40BCDF5313D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewYearChaos", "NewYearChaos\NewYearChaos.csproj", "{1F68A274-716E-4173-A211-BC25445FED98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewYearChaos", "NewYearChaos\NewYearChaos.csproj", "{1F68A274-716E-4173-A211-BC25445FED98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodlandElectricity", "GoodlandElectricity\GoodlandElectricity.csproj", "{D01C8434-EDAB-4A92-A214-97176E34A274}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodlandElectricity", "GoodlandElectricity\GoodlandElectricity.csproj", "{D01C8434-EDAB-4A92-A214-97176E34A274}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SherlockValidstring", "SherlockValidstring\SherlockValidstring.csproj", "{8DE0BE0E-BD3D-4E5E-9635-E887FCE3FDB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClimbingLeaderboard", "ClimbingLeaderboard\ClimbingLeaderboard.csproj", "{372720DB-01DF-4179-8A30-7AAD8F3028D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseLinkedList", "ReverseLinkedList\ReverseLinkedList.csproj", "{7271706D-E095-43A8-8925-8BBE308A3325}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -175,6 +181,18 @@ Global
 		{D01C8434-EDAB-4A92-A214-97176E34A274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D01C8434-EDAB-4A92-A214-97176E34A274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D01C8434-EDAB-4A92-A214-97176E34A274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE0BE0E-BD3D-4E5E-9635-E887FCE3FDB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE0BE0E-BD3D-4E5E-9635-E887FCE3FDB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE0BE0E-BD3D-4E5E-9635-E887FCE3FDB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE0BE0E-BD3D-4E5E-9635-E887FCE3FDB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{372720DB-01DF-4179-8A30-7AAD8F3028D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{372720DB-01DF-4179-8A30-7AAD8F3028D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{372720DB-01DF-4179-8A30-7AAD8F3028D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{372720DB-01DF-4179-8A30-7AAD8F3028D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7271706D-E095-43A8-8925-8BBE308A3325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7271706D-E095-43A8-8925-8BBE308A3325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7271706D-E095-43A8-8925-8BBE308A3325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7271706D-E095-43A8-8925-8BBE308A3325}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
