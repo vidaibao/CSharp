@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReverseLinkedList.TeddySmith;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ReverseLinkedList
 {
-    public class LinkedListGenerics
+    public class LinkedListGeneric
     {
-        public static void LListGenerics()
+        public static void LListGeneric()
         {
             // Create the link list.
             string[] words =
@@ -38,6 +39,22 @@ namespace ReverseLinkedList
             sentence.RemoveLast();
             sentence.AddFirst(mark1);
             Display(sentence, "Test 4: Move last node to be first node:");
+
+
+            // ********************************************************
+            // Me Test 4a
+            // Reverse Singly LinkedList
+            Reverse(sentence);
+            Display(sentence, "Test 4a: Reverse the singly linked list:");
+
+
+            // Me Test 4b
+            // Reverse recursive Singly LinkedList
+            ReverseRecursive(sentence, sentence.First);
+            Display(sentence, "Test 4b: Reverse again by recursive the linked list:");
+
+            // ********************************************************
+
 
             // Indicate the last occurence of 'the'.
             sentence.RemoveFirst();
@@ -124,6 +141,31 @@ namespace ReverseLinkedList
                 sentence.Contains("jumps"));
 
             Console.ReadLine();
+        }
+
+        private static void ReverseRecursive<T>(LinkedList<T> linkedList, LinkedListNode<T> current)
+        {
+            if (current.Next != null)
+            {
+                ReverseRecursive(linkedList, current.Next);
+            }
+
+            linkedList.Remove(current);
+            linkedList.AddLast(current.Value);
+        }
+
+        private static void Reverse(LinkedList<string> sentence)
+        {
+            // a->b->c->null
+            LinkedListNode<string> current = sentence.First;// address of the first a
+            while (current != null)
+            {
+                LinkedListNode<string> temp = current.Next;// save the next b address to temp
+                sentence.Remove(current);
+                sentence.AddFirst(current);
+                current = temp;
+            }
+
         }
 
         private static void Display(LinkedList<string> words, string test)
