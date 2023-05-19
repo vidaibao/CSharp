@@ -21,7 +21,7 @@ namespace ReverseLinkedList
         static void Main(string[] args)
         {
 
-            LinkedListGeneric.LListGeneric();
+            MyLinkedList.LListGeneric();
             
             //LinkedList_Leetcode();
 

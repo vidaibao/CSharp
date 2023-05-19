@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ReverseLinkedList
 {
-    public class LinkedListGeneric
+    public class MyLinkedList
     {
         public static void LListGeneric()
         {

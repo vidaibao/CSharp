@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLinkedList", "MyLinkedList\MyLinkedList.csproj", "{A87AB326-18E9-4DAC-812F-24A16EC0552F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLinkedList", "CustomLinkedList\CustomLinkedList.csproj", "{912D1BEA-4015-4399-B8FA-2C6A3137D46A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A87AB326-18E9-4DAC-812F-24A16EC0552F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A87AB326-18E9-4DAC-812F-24A16EC0552F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A87AB326-18E9-4DAC-812F-24A16EC0552F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A87AB326-18E9-4DAC-812F-24A16EC0552F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912D1BEA-4015-4399-B8FA-2C6A3137D46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912D1BEA-4015-4399-B8FA-2C6A3137D46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912D1BEA-4015-4399-B8FA-2C6A3137D46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912D1BEA-4015-4399-B8FA-2C6A3137D46A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E251D17-59BF-4809-9B0C-F9C188BEEA39}
+	EndGlobalSection
+EndGlobal
