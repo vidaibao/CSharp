@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLinkedList", "MyLinkedLis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLinkedList", "CustomLinkedList\CustomLinkedList.csproj", "{912D1BEA-4015-4399-B8FA-2C6A3137D46A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookReader", "BookReader\BookReader.csproj", "{AA0EF3D0-0818-4107-A7F8-8C71A68FEFFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{912D1BEA-4015-4399-B8FA-2C6A3137D46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{912D1BEA-4015-4399-B8FA-2C6A3137D46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{912D1BEA-4015-4399-B8FA-2C6A3137D46A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA0EF3D0-0818-4107-A7F8-8C71A68FEFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0EF3D0-0818-4107-A7F8-8C71A68FEFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0EF3D0-0818-4107-A7F8-8C71A68FEFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0EF3D0-0818-4107-A7F8-8C71A68FEFFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
