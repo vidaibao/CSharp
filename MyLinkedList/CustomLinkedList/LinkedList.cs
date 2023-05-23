@@ -54,13 +54,29 @@
         public void AddAfter(Node<T> newNode, Node<T> existingNode)
         {
             // if you add after the last node, then u need to repoint Last pointer
-            if(this.Last == existingNode)
+            if (this.Last == existingNode)
             {
                 this.Last = newNode;    // set the last pointer
             }
             newNode.Next = existingNode.Next;   // get the pointer to the next
             existingNode.Next = newNode;    //  point to the right after node
             this.Count++;
+        }
+
+        public void InsertNodeAt(int index, Node<T> newNode)
+        {
+            if (index >= Count)
+            {
+                AddLast(newNode);
+                return;
+            }
+            Node<T> cur = this.First;
+            int i = 0;
+            while (cur != null && i++ < index)
+            {
+                cur = cur.Next;
+            }
+            Console.WriteLine(cur.Data);
         }
 
         public Node<T> Find(T target)
@@ -73,6 +89,18 @@
             }
             return currentNode;
         }
+
+        public Node<T> Find(int index)
+        {
+            Node<T> currentNode = First;
+            for (int i = 0; i < index; i++)
+            {
+                currentNode = currentNode.Next;
+            }
+            return currentNode;
+        }
+
+
 
         public void RemoveFirst()
         {

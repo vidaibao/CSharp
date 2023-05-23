@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLinkedList", "MyLinkedList\MyLinkedList.csproj", "{A87AB326-18E9-4DAC-812F-24A16EC0552F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLinkedList", "MyLinkedList\MyLinkedList.csproj", "{A87AB326-18E9-4DAC-812F-24A16EC0552F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLinkedList", "CustomLinkedList\CustomLinkedList.csproj", "{912D1BEA-4015-4399-B8FA-2C6A3137D46A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLinkedList", "CustomLinkedList\CustomLinkedList.csproj", "{912D1BEA-4015-4399-B8FA-2C6A3137D46A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookReader", "BookReader\BookReader.csproj", "{AA0EF3D0-0818-4107-A7F8-8C71A68FEFFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookReader", "BookReader\BookReader.csproj", "{AA0EF3D0-0818-4107-A7F8-8C71A68FEFFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoublyLinkedList01", "DoublyLinkedList01\DoublyLinkedList01.csproj", "{814A3F29-40BA-4F1B-9EB3-D8F4265D8350}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{AA0EF3D0-0818-4107-A7F8-8C71A68FEFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA0EF3D0-0818-4107-A7F8-8C71A68FEFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA0EF3D0-0818-4107-A7F8-8C71A68FEFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{814A3F29-40BA-4F1B-9EB3-D8F4265D8350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{814A3F29-40BA-4F1B-9EB3-D8F4265D8350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{814A3F29-40BA-4F1B-9EB3-D8F4265D8350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{814A3F29-40BA-4F1B-9EB3-D8F4265D8350}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

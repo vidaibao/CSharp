@@ -7,10 +7,15 @@ namespace MyLinkedList
         static void Main(string[] args)
         {
             LinkedListDataInit();
+            DoublyLinkedListDataInit();
             
         }
 
-      
+        private static void DoublyLinkedListDataInit()
+        {
+            Do
+        }
+
         private static void LinkedListDataInit()
         {
             CustomLinkedList.LinkedList<string> llist = new CustomLinkedList.LinkedList<string>();
@@ -32,6 +37,10 @@ namespace MyLinkedList
 
             llist.Traverse();
 
+            Console.WriteLine();
+            //Console.WriteLine(llist.Find(2).Data); ;
+            
+            llist.InsertNodeAt(2, );
         }
     }
 }
