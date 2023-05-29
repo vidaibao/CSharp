@@ -1,4 +1,4 @@
-﻿using BoardLogic;
+﻿using BoardLogic01;
 
 namespace TicTacToe_Sluiter
 {
@@ -37,7 +37,7 @@ namespace TicTacToe_Sluiter
                 }
                 game.Grid[userTurn] = 1;
 
-                if (IsBoardFull() == 1)
+                if (game.IsBoardFull())
                 {
                     if (ConfirmGame() == 0)
                         continue;
@@ -47,17 +47,15 @@ namespace TicTacToe_Sluiter
                 // DON'T doublicate choose
                 while (computerTurn == -1 || game.Grid[computerTurn] != 0) 
                 {
-                    computerTurn = rand.Next(8);
+                    computerTurn = rand.Next(9);
                 }
                 Console.WriteLine($"Computer chooses {computerTurn}");
                 game.Grid[computerTurn] = 2;
 
-                if (IsBoardFull() == 1)
+                if (game.IsBoardFull())
                 {
                     if (ConfirmGame() == 0)
-                    {
                         continue;
-                    }
                     break;
                 }
                 printBoard();
@@ -70,7 +68,7 @@ namespace TicTacToe_Sluiter
 
 
         // return 0 if ok, 1 if no more place to pick
-        private static int IsBoardFull()
+        /*private static int IsBoardFull()
         {
             // check space to pick 
             for (int i = 0; i < 9; i++)
@@ -79,7 +77,7 @@ namespace TicTacToe_Sluiter
 
             //
             return 1;// ConfirmGame();
-        }
+        }*/
 
 
         

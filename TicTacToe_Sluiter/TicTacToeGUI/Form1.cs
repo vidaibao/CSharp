@@ -17,6 +17,10 @@ namespace TicTacToeGUI
 
         Board game = new Board();
         Button[] buttons = new Button[9];
+        Random random = new Random();
+
+        int pointCCB = 0;
+        int pointPC = 0;
 
         public Form1()
         {
@@ -37,8 +41,9 @@ namespace TicTacToeGUI
             // add a common click event to each button
             for (int i = 0; i < buttons.Length; i++)
             {
-                buttons[i].Click += handleButtonClick;// gom func
+                buttons[i].Click += handleButtonClick;// gom handle func
                 buttons[i].Tag = i;
+                buttons[i].Font = new Font(buttons[i].Font.FontFamily, 100);
             }
 
         }
@@ -46,12 +51,72 @@ namespace TicTacToeGUI
         private void handleButtonClick(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
-            MessageBox.Show($"button {clickedButton.Tag} was clicked.");
+            //MessageBox.Show($"button {clickedButton.Tag} was clicked.");
 
             int gameSquareNumber = (int)clickedButton.Tag;
+            if (game.Grid[gameSquareNumber] != 0)
+            {
+                MessageBox.Show("Try another button!");
+                return;
+            }
             game.Grid[gameSquareNumber] = 1;
 
             UpdateBoard();
+
+            if (game.Check4Winner() == 1)
+            {
+                MessageBox.Show("Player CCB won");
+                pointCCB++;
+                disableAllButtons();
+            }
+            else if (game.IsBoardFull())
+            {
+                MessageBox.Show("The board is full");
+                disableAllButtons();
+            }
+            else
+            {
+                // computer turn
+                ComputerChoose();
+            }
+   
+
+        }
+
+        private void disableAllButtons()
+        {
+            SetPoint();
+
+            foreach (var button in buttons)
+            {
+                button.Enabled = false;
+            }
+        }
+
+        private void ComputerChoose()
+        {
+            int computerChoose = -1;
+            while (computerChoose == -1 || game.Grid[computerChoose] != 0)
+            {
+                computerChoose = random.Next(9);
+            }
+            //MessageBox.Show($"Computer chooses {computerChoose}");
+            game.Grid[computerChoose] = 2;
+
+            UpdateBoard();
+
+            if (game.Check4Winner() == 2)
+            {
+                MessageBox.Show("Player Computer won");
+                pointPC++;
+                disableAllButtons();
+            }
+            else if (game.IsBoardFull())
+            {
+                MessageBox.Show("The board is full");
+                disableAllButtons();
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -67,21 +132,45 @@ namespace TicTacToeGUI
                 if (game.Grid[i] == 0)
                 {
                     buttons[i].Text = "";
+                    buttons[i].ForeColor = Color.Black;
+                    buttons[i].Enabled = true;
                 }
                 else if (game.Grid[i] == 1)
                 {
                     buttons[i].Text = "X";
+                    buttons[i].ForeColor = Color.Red;
+                    buttons[i].Enabled = false;
                 }
                 else if (game.Grid[i] == 2)
                 {
                     buttons[i].Text = "O";
+                    buttons[i].ForeColor = Color.Yellow;
+                    buttons[i].Enabled = false;
                 }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+        private void btnNewGame_Click(object sender, EventArgs e)
         {
-
+            game = new Board();
+            EnableAllButtons();
         }
+
+        private void SetPoint()
+        {
+            lblPointCCB.Text = pointCCB.ToString();
+            lblPointPC.Text = pointPC.ToString();
+        }
+
+        private void EnableAllButtons()
+        {
+            foreach (var item in buttons)
+            {
+                item.Enabled = true;
+            }
+            UpdateBoard();
+        }
+
     }
 }

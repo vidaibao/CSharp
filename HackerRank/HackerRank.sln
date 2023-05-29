@@ -63,7 +63,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SherlockValidstring", "Sher
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClimbingLeaderboard", "ClimbingLeaderboard\ClimbingLeaderboard.csproj", "{372720DB-01DF-4179-8A30-7AAD8F3028D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseLinkedList", "ReverseLinkedList\ReverseLinkedList.csproj", "{7271706D-E095-43A8-8925-8BBE308A3325}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseLinkedList", "ReverseLinkedList\ReverseLinkedList.csproj", "{7271706D-E095-43A8-8925-8BBE308A3325}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleDetection", "CycleDetection\CycleDetection.csproj", "{BE7A00B8-5113-4635-8C22-06D9AE3073B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IceCreamParlor", "IceCreamParlor\IceCreamParlor.csproj", "{83276A60-EC61-43A5-9967-22483BD35A83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertNodeSortedDoublyLinkedList", "InsertNodeSortedDoublyLinkedList\InsertNodeSortedDoublyLinkedList.csproj", "{5E6D261D-B6FF-43CE-B409-DA7350F7758D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -193,6 +199,18 @@ Global
 		{7271706D-E095-43A8-8925-8BBE308A3325}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7271706D-E095-43A8-8925-8BBE308A3325}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7271706D-E095-43A8-8925-8BBE308A3325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE7A00B8-5113-4635-8C22-06D9AE3073B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7A00B8-5113-4635-8C22-06D9AE3073B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7A00B8-5113-4635-8C22-06D9AE3073B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7A00B8-5113-4635-8C22-06D9AE3073B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83276A60-EC61-43A5-9967-22483BD35A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83276A60-EC61-43A5-9967-22483BD35A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83276A60-EC61-43A5-9967-22483BD35A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83276A60-EC61-43A5-9967-22483BD35A83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E6D261D-B6FF-43CE-B409-DA7350F7758D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E6D261D-B6FF-43CE-B409-DA7350F7758D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E6D261D-B6FF-43CE-B409-DA7350F7758D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E6D261D-B6FF-43CE-B409-DA7350F7758D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

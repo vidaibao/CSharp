@@ -7,8 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BoardLogic01\BoardLogic01.csproj" />
-  </ItemGroup>
-
 </Project>

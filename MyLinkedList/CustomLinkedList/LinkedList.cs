@@ -70,13 +70,48 @@
                 AddLast(newNode);
                 return;
             }
+            if (index == 0)
+            {
+                AddFirst(newNode);
+                return;
+            }
+            //Node<T> prev = null;
+            Node<T> cur = this.First;
+            int i = 1;
+            while (i++ < index)
+            {
+                cur = cur.Next;
+            }
+
+            newNode.Next = cur.Next;
+            cur.Next = newNode;
+            Count++;
+        }
+
+        public void InsertNodeAt01(int index, Node<T> newNode)
+        {
+            if (index >= Count)
+            {
+                AddLast(newNode);
+                return;
+            }
+            if (index == 0)
+            {
+                AddFirst(newNode);
+                return;
+            }
+            Node<T> prev = null;
             Node<T> cur = this.First;
             int i = 0;
             while (cur != null && i++ < index)
             {
+                prev = cur;
                 cur = cur.Next;
             }
-            Console.WriteLine(cur.Data);
+
+            prev.Next = newNode;
+            newNode.Next = cur;
+            Count++;
         }
 
         public Node<T> Find(T target)

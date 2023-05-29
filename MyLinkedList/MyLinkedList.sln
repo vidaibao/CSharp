@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomLinkedList", "CustomL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookReader", "BookReader\BookReader.csproj", "{AA0EF3D0-0818-4107-A7F8-8C71A68FEFFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoublyLinkedList01", "DoublyLinkedList01\DoublyLinkedList01.csproj", "{814A3F29-40BA-4F1B-9EB3-D8F4265D8350}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoublyLinkedList01", "DoublyLinkedList01\DoublyLinkedList01.csproj", "{814A3F29-40BA-4F1B-9EB3-D8F4265D8350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merge2SortedLinkedList", "Merge2SortedLinkedList\Merge2SortedLinkedList.csproj", "{BDF31066-4468-428A-8F67-5075AFFB7D30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{814A3F29-40BA-4F1B-9EB3-D8F4265D8350}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{814A3F29-40BA-4F1B-9EB3-D8F4265D8350}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{814A3F29-40BA-4F1B-9EB3-D8F4265D8350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF31066-4468-428A-8F67-5075AFFB7D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF31066-4468-428A-8F67-5075AFFB7D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF31066-4468-428A-8F67-5075AFFB7D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF31066-4468-428A-8F67-5075AFFB7D30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

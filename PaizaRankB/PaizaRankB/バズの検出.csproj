@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BoardLogic01\BoardLogic01.csproj" />
+    <Folder Include="Reference\" />
   </ItemGroup>
 
 </Project>

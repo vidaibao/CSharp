@@ -1,8 +1,11 @@
-﻿namespace BoardLogic01
+﻿using System;
+
+namespace BoardLogic01
 {
     public class Board
     {
         public int[] Grid { get; set; }
+        
         public Board() 
         {
             // initialize the Grid
@@ -64,5 +67,16 @@
             return 0;
         }
 
+        public bool IsBoardFull()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                if (Grid[i] == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

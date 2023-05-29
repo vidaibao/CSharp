@@ -7,14 +7,11 @@ namespace MyLinkedList
         static void Main(string[] args)
         {
             LinkedListDataInit();
-            DoublyLinkedListDataInit();
+            //DoublyLinkedListDataInit();
             
         }
 
-        private static void DoublyLinkedListDataInit()
-        {
-            Do
-        }
+        
 
         private static void LinkedListDataInit()
         {
@@ -40,7 +37,30 @@ namespace MyLinkedList
             Console.WriteLine();
             //Console.WriteLine(llist.Find(2).Data); ;
             
-            llist.InsertNodeAt(2, );
+            Node<string> dd = new Node<string>("Add");
+            int index = 2;
+            Console.WriteLine($"Insert node data {dd.Data} to index = {index}, data = {llist.Find(index).Data}");
+            llist.InsertNodeAt(2, dd);
+
+            llist.Traverse();
         }
+        /*
+        static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode llist, int data, int position)
+        {
+            SinglyLinkedListNode nextNode = llist;
+            int i = 1;
+
+            while (i < position)
+            {
+                nextNode = nextNode.next;
+                i++;
+            }
+
+            SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+            newNode.next = nextNode.next;
+            nextNode.next = newNode;
+
+            return llist;
+        }*/
     }
 }
