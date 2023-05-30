@@ -68,14 +68,55 @@ namespace InsertNodeSortedDoublyLinkedList
             PrintListInts(llist1);
         }
 
-
+        // 
 
 
         public static DoublyLinkedListNode sortedInsert(DoublyLinkedListNode llist, int data)
         {
+            if (llist == null) return null;
+            
+            DoublyLinkedListNode newNode = new DoublyLinkedListNode(data);
+            DoublyLinkedListNode cur = llist;
+
+            if (cur.data >= data)
+            {
+                newNode.next = cur;
+                cur.prev = newNode;
+                return newNode;
+            }
+
+            while (cur != null)
+            {
+                if (cur.data >= data)
+                {
+                    cur.prev.next = newNode;
+                    newNode.prev = cur.prev;
+                    newNode.next = cur;
+                    cur.prev = newNode;
+                    break;
+                }
+                else if (cur.next == null)
+                {
+                    cur.next = newNode;
+                    newNode.prev = cur;
+                    break;
+                }
+                cur = cur.next;
+            }
+
+            return llist;
+        }
+        
+            
+            
+            
+            
+            
+        public static DoublyLinkedListNode sortedInsert00(DoublyLinkedListNode llist, int data)
+        {
             List<int> list = new List<int>();
             DoublyLinkedListNode node = llist;
-            DoublyLinkedListNode prevNode;
+            //DoublyLinkedListNode prevNode;
             while (node != null)
             {
                 if (node.data >= data) list.Add(data);
@@ -190,4 +231,25 @@ Explanation
 The initial doubly linked list is:  1 <-> 3 <-> 4 <-> 10 -> NULL.
 
 The doubly linked list after insertion is: 1 <-> 3 <-> 4 <-> 5 <-> 10 -> NULL.
+
+ ----------------++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ 
+ /tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.cs(24,25): warning CS8625: Cannot convert null literal to non-nullable reference type. [/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.csproj]
+/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.cs(25,25): warning CS8625: Cannot convert null literal to non-nullable reference type. [/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.csproj]
+/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.cs(22,16): warning CS8618: Non-nullable field 'next' must contain a non-null value when exiting constructor. Consider declaring the field as nullable. [/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.csproj]
+/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.cs(22,16): warning CS8618: Non-nullable field 'prev' must contain a non-null value when exiting constructor. Consider declaring the field as nullable. [/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.csproj]
+/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.cs(34,25): warning CS8625: Cannot convert null literal to non-nullable reference type. [/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.csproj]
+/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.cs(35,25): warning CS8625: Cannot convert null literal to non-nullable reference type. [/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.csproj]
+/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.cs(33,16): warning CS8618: Non-nullable field 'head' must contain a non-null value when exiting constructor. Consider declaring the field as nullable. [/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.csproj]
+/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.cs(33,16): warning CS8618: Non-nullable field 'tail' must contain a non-null value when exiting constructor. Consider declaring the field as nullable. [/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.csproj]
+/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.cs(145,43): error CS0103: The name 'sortedInsert' does not exist in the current context [/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.csproj]
+/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.cs(129,50): warning CS8604: Possible null reference argument for parameter 'path' in 'StreamWriter.StreamWriter(string path, bool append)'. [/tmp/submission/20230529/23/42/hackerrank-3a01cccf862a290ad76b27b40cf333e4/code/Solution.csproj]
+Exit Status
+
+1
+ 
+ 
+ 
+ 
  */
